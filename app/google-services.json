@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "662967712114",
+    "project_id": "shift-roster-44ceb",
+    "storage_bucket": "shift-roster-44ceb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662967712114:android:eac1945f659f85c11d85eb",
+        "android_client_info": {
+          "package_name": "com.example.shiftroster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662967712114-hhcvqohg678la44qili197am4hs9lueu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkp9nmOiBMS8hq_AZz9_-7Hzp0K7ZV29E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662967712114-hhcvqohg678la44qili197am4hs9lueu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

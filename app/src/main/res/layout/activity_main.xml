@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8d9899"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="SysOps"
+          android:textSize="75dp"
+          android:textAlignment="center"
+          android:paddingTop="15dp"
+          android:textColor="@color/black"></TextView>
+      <LinearLayout
+          android:layout_width="400dp"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:layout_gravity="center">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="GE"
+              android:textSize="40dp"
+              android:textColor="@color/black"
+              android:layout_marginLeft="120dp"></TextView>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="10dp"
+              android:layout_marginTop="5dp"
+              android:text="Capgemini"
+              android:textColor="@color/black"
+              android:textSize="30dp"></TextView>
+
+      </LinearLayout>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="7dp"
+          android:background="#0F2027"
+          android:layout_marginTop="5dp"></View>
+      <TextView
+          android:text="Welcome to SysOps Shift Roster Application"
+          android:textAlignment="center"
+          android:id="@+id/MarqueeText"
+          android:textSize="15dp"
+          android:layout_marginTop="5dp"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:singleLine="true"
+          android:ellipsize="marquee"
+          android:marqueeRepeatLimit="marquee_forever"
+          android:scrollHorizontally="true"
+          android:paddingLeft="15dip"
+          android:paddingRight="15dip"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:freezesText="false"></TextView>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Select Date below"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:textSize="20dp"
+          android:layout_marginTop="15dp"></TextView>
+
+      <Spinner
+          android:id="@+id/spinner_date"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:layout_marginRight="30dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Select Shift below"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:textSize="20dp"
+          android:layout_marginTop="15dp"></TextView>
+
+
+      <Spinner
+          android:id="@+id/spinner_name"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:layout_marginRight="30dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true" />
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Search by shift"
+          android:layout_gravity="center"
+          android:id="@+id/btn_shift_search"></Button>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Select Resource below"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:textSize="20dp"
+          android:layout_marginTop="15dp"></TextView>
+
+
+      <Spinner
+          android:id="@+id/spinner_shift"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:layout_marginRight="30dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true" />
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Search by Resource"
+          android:layout_gravity="center"
+          android:id="@+id/btn_name_search"></Button>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Check Leaves in this month for"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:textSize="20dp"
+          android:layout_marginTop="15dp"></TextView>
+
+
+      <Spinner
+          android:id="@+id/spinner_leave"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:layout_marginRight="30dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true" />
+
+      <Button
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:text="Go"
+          android:layout_gravity="center"
+          android:id="@+id/btn_leave_search"></Button>
+
+
+
+
+  </LinearLayout></ScrollView>
+
+
+
+
+</RelativeLayout>

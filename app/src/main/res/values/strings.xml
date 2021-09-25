@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Shift Roster</string>
+
+    <string-array name="shifts">
+        <item>First shift(F3)</item>
+        <item>Second Shift(S2)</item>
+        <item>Third Shift(T7)</item>
+        <item>Other (GS)</item>
+        <item>Leave</item>
+    </string-array>
+
+    <string-array name="names">
+        <item>Rajdeep Singh</item>
+        <item>Kunal Chowdhury</item>
+        <item>Krishnanshu Dey</item>
+        <item>Kothapalli Manichandu</item>
+        <item>Anubhav Goel</item>
+        <item>Subhrajit Das</item>
+        <item>Lipsit Satapathy</item>
+        <item>Saurabh Joshi</item>
+        <item>Suhranil Ghosh</item>
+        <item>Sandeep Varupulla</item>
+        <item>Rajdeep Singh</item>
+        <item>Rajdeep Singh</item>
+
+
+    </string-array>
+
+</resources>

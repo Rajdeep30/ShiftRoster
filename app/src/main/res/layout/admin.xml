@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/custom_bg"
+    android:layout_gravity="center"
+    tools:context=".Admin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SysOps"
+        android:textSize="75dp"
+        android:textAlignment="center"
+        android:paddingTop="15dp"
+        android:textColor="@color/black"></TextView>
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GE"
+            android:textSize="40dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="120dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Capgemini"
+            android:textColor="@color/black"
+            android:textSize="30dp"></TextView>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="#0F2027"
+        android:layout_marginTop="5dp"></View>
+    <TextView
+        android:text="Welcome to SysOps Shift Roster Application"
+        android:textAlignment="center"
+        android:id="@+id/MarqueeText"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="false"></TextView>
+
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Hello Admin,"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            android:background="@drawable/round_btn_bg"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btn_upload"
+            android:text="Upload Roster"
+            android:layout_marginTop="10dp"></Button>
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:id="@+id/img_info"
+                android:src="@drawable/ic_baseline_online_prediction_24"
+                android:layout_marginTop="10dp"></ImageView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
