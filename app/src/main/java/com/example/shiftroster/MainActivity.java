@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     int day, month, YYYY;
     String csvfileString, leaveVar="Leave";
     int selectedDateIndex=1, selectedNameIndex =1, selectedShiftIndex = 1;
-    String selectedName, selectedDate;
+    String selectedName, selectedDate, selectedShift;
 
     ArrayList<String> dates = new ArrayList<>();
     ArrayList<Integer> leaveIndex = new ArrayList<>();
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(this, "erro" + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error in Parsing CSV" + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         ArrayAdapter<String> myAdapter1 = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1,allRows.get(0));
@@ -151,11 +151,7 @@ public class MainActivity extends AppCompatActivity {
                     personName.add(allRows.get(0).get(i));
                     //Toast.makeText(MainActivity.this, "Persons having "+ shift_search.get(selectedShiftIndex) + " are: "+allRows.get(0).get(i), Toast.LENGTH_SHORT).show();
                 }
-               /* ArrayAdapter<String> myAdapterlistview = new ArrayAdapter<>(MainActivity.this,
-                        android.R.layout.simple_list_item_1,personName);
-                myAdapterlistview.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-                shiftsearchlistview.setAdapter(myAdapterlistview);*/
                     Intent intent = new Intent(MainActivity.this, ShiftSearchListView.class);
                     intent.putStringArrayListExtra("personName", personName);
                     intent.putExtra("shiftName", shift_search.get(selectedShiftIndex));
@@ -179,10 +175,12 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<String> leaveDates = new ArrayList<>();
                 selectedName = spinner_leave.getSelectedItem().toString();
                 selectedNameIndex = spinner_leave.getSelectedItemPosition();
+                selectedShiftIndex = spinner_name.getSelectedItemPosition();
+                selectedShift =  shift_search.get(selectedShiftIndex);
                 if (selectedNameIndex != 0){
                     for (int i= 0; i<allRows.size(); i++)
                     {
-                        if (leaveVar.equalsIgnoreCase(allRows.get(i).get(selectedNameIndex)))
+                        if (shift_search.get(selectedShiftIndex).equalsIgnoreCase(allRows.get(i).get(selectedNameIndex)))
                         {
                             leaveIndex.add(i);
                         }
@@ -197,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, LeaveSearchListView.class);
                     intent.putStringArrayListExtra("leaveDates", leaveDates);
                     intent.putExtra("name",selectedName);
+                    intent.putExtra("shiftName", selectedShift);
                     startActivity(intent);
 
                 }else{
@@ -213,7 +212,15 @@ public class MainActivity extends AppCompatActivity {
                 selectedDateIndex = spinner_date.getSelectedItemPosition();
                 selectedDate = spinner_date.getSelectedItem().toString();
                     if (selectedDateIndex != 0 && selectedNameIndex != 0) {
-                        Toast.makeText(MainActivity.this, "@"+selectedName+" is on " + allRows.get(selectedDateIndex).get(selectedNameIndex)+" on "+ selectedDate, Toast.LENGTH_SHORT).show();
+                        String shiftName;
+                        shiftName = allRows.get(selectedDateIndex).get(selectedNameIndex);
+                        Intent intent = new Intent(MainActivity.this, resourcesearch_Listview.class);
+                        intent.putExtra("name",selectedName);
+                        intent.putExtra("date", selectedDate);
+                        intent.putExtra("shift", shiftName);
+                        startActivity(intent);
+
+                        //Toast.makeText(MainActivity.this, "@"+selectedName+" is on " + shiftName+" on "+ selectedDate, Toast.LENGTH_SHORT).show();
                     }else {
                         Toast.makeText(MainActivity.this, "Please Select Date and Resource name", Toast.LENGTH_SHORT).show();
                     }

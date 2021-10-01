@@ -27,9 +27,10 @@ public class LeaveSearchListView extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         String message = bundle.getString("name");
+        String shiftName = bundle.getString("shiftName");
 
 
-        toptext1.setText("@"+ message+ " has leaves on following dates: ");
+        toptext1.setText("@"+ message+ " has "+ shiftName+" for this month on below dates: ");
 
         if (urls.size()!=0) {
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(LeaveSearchListView.this,
@@ -39,7 +40,11 @@ public class LeaveSearchListView extends AppCompatActivity {
             listview.setAdapter(myAdapter);
         }else
         {
-            test.add("No Persons are in the selected shift");
+            test.add(" ");
+            test.add(" ");
+            test.add("              No "+shiftName+" shift for "+message+" in this month");
+            test.add(" ");
+            test.add(" ");
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(LeaveSearchListView.this,
                     android.R.layout.simple_list_item_1, test);
             myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
